@@ -33,9 +33,10 @@
   print('''
      ===============E  Commerce    System  =====================
      1 - Add Product To User 
-     2 - Delet Product To User 
-     3 - View All Products Avilable 
-     4 - Exit  
+     2 - Delet Product From User 
+     3 - Add Prodct To The Store Products 
+     4 - View All Products Avilable 
+     5 - Exit  
      ===========================================================
 
 

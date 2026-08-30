@@ -21,7 +21,8 @@
      3 - Update User Data 
      4 - View User Cart 
      5 - Clear User Cart 
-     6 - Exit  
+     6 - view all users
+     7 - Exit  
      ===========================================================
 
 

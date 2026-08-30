@@ -34,15 +34,6 @@ List<Product> products = [
 
   
 
-bool addProductToTheUser(int id , String name , double price ){
-  if(checkProductExsists(id)) return false ; 
-  products.add(Product(id, name, price)) ;
-      return true ;
-
-}
- 
-
-
 
 bool addProductToTheStore(int id , String name , double price ){
   if(checkProductExsists(id)) return false ; 
@@ -57,7 +48,7 @@ bool addProductToTheStore(int id , String name , double price ){
 
  bool addProductToUser(int prodcutsId , int userId){
     if(getProcut(prodcutsId) != null )  
-     {   var user = checkUserExist(userId);
+     {   var user = checkUserExist(id : userId);
          if (user == null) return false;
    if(checkProductExsistsUsersCart(prodcutsId) != null){
     var entry =  checkProductExsistsUsersCart(prodcutsId)!  ;
@@ -78,7 +69,7 @@ return false ;
 
  bool deleteProductToUser(int prodcutsId , int userId){
     if(getProcut(prodcutsId) != null )  
-     {   var user = checkUserExist(userId);
+     {   var user = checkUserExist(id :userId);
          if (user == null) return false;
    if(checkProductExsistsUsersCart(prodcutsId) != null){
     var entry =  checkProductExsistsUsersCart(prodcutsId)!  ;

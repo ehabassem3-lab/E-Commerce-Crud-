@@ -13,7 +13,7 @@ class User {
 List<User> users = []; 
 
 
-  bool  createUser(String name ){
+  bool  creatUeser(String name ){
    for(int i = 0 ; i < users.length ; i++){
     if(users[i].name == name){
         return false ;
@@ -54,28 +54,40 @@ List<User> users = [];
 
      
 
-  User? checkUserExist(int id ){
-    for(int i = 0 ; i < users.length ; i++){
+  User? checkUserExist({ int? id   , String? name }  ){
+    if(name == null )
+    {
+      for(int i = 0 ; i < users.length ; i++){
       if(users[i].id == id){
         return users[i] ;
 
       }
 
     }
-    return null ;
+    return null 
+    ;} 
+    else{
+        for(int i = 0 ; i < users.length ; i++){
+      if(users[i].name == name){
+        return users[i] ;
+
+      }
+
+    }
+    return null   ;
+    }
 
   }
 
 List<Map<Product,int>>? userCart(int id ){
-  if(checkUserExist(id) == null )  return   null ;
-   
-   return checkUserExist(id)?.products  ;
+  if(checkUserExist(id : id) == null )  return   null ;
+   return checkUserExist( id : id)?.products  ;
 
 
 }
  bool cleaerUserCart(int id ){
-  if(checkUserExist(id) == null )  return   false ;
-  checkUserExist(id)?.products = [] ;
+  if(checkUserExist(id :id) == null )  return   false ;
+  checkUserExist(id : id)?.products = [] ;
    return true   ;
 
 

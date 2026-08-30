@@ -1,4 +1,6 @@
+import 'view/runApp.dart';
+
 
 void main(){
-print("E commerce crud") ;
+   runApp();
 }
